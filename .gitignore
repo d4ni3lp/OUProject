@@ -1,0 +1,68 @@
+package smsystem1.pkg0;
+import java.io.*;
+import java.util.*;
+
+/**
+ * Instance created when called by UI. UI passes location of file
+ * Instance reads file, and creates necessary post, reply objects etc, 
+ * confirms when data loaded
+ * 
+ */
+public class SMSystem10 
+    {
+    public SMSystem10()
+    {
+  
+    }
+    /**
+     * @param args the command line arguments
+     * 
+     */
+    public static void main(String[] args) 
+    {
+    //Constructor
+    SMSystem10 smSystem = new SMSystem10();    
+        
+    // call up GUI
+    GUI gui = new GUI();
+    gui.setVisible(true);
+       
+    }
+   
+    public String postRef;
+    public String convRef;
+    public String replyPost;
+    public String dateTime;
+    public String postText;
+    public String poster;
+    public String agentName;
+    public String postTags;
+    
+
+        // File Chooser passes file
+    public boolean importFile(String aFile) throws FileNotFoundException
+    {
+        // buffered csv reader
+        Scanner bufferedScanner = new Scanner(new BufferedReader(new FileReader(aFile)));
+        String line;
+        while (bufferedScanner.hasNext())
+            {
+            String data = bufferedScanner.next();
+            String[] values = data.split("Insert regular expression");
+            
+            postRef = values[0];
+            convRef = values[1];
+            replyPost = values[2];
+            replyPost = values[3];
+            //finish reg exp to split each line, add rest of variables and call constructors, create list for each class
+            }
+      
+        
+        
+        return true;
+    }
+        
+        //call everything else
+       
+    
+}
