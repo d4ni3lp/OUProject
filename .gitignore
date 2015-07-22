@@ -1,3 +1,4 @@
+//Main
 package smsystem1.pkg0;
 import java.io.*;
 import java.util.*;
@@ -65,4 +66,183 @@ public class SMSystem10
         //call everything else
        
     
+}
+
+
+// Customer
+
+package smsystem1.pkg0;
+
+/**
+ *
+ * @author d4ni3l
+ */
+public class Customer 
+{
+
+    /**
+     *
+     */
+    public String userName;
+
+    public Customer(String aString) 
+    {
+        this.userName = aString ;
+    }
+    
+}
+
+//Agent
+
+package smsystem1.pkg0;
+
+/**
+ *
+ * @author d4ni3l
+ */
+public class Agent 
+{
+
+    /**
+     *
+     */
+    public String agentName;
+
+    public Agent(String aString) 
+    {
+        this.agentName = aString ;
+    }
+    
+}
+
+//Conversation
+
+package smsystem1.pkg0;
+
+/**
+ *
+ * @author d4ni3l
+ */
+public class Conversation 
+{
+
+    /**
+     *
+     */
+    public int convRef;
+
+    public Conversation(int anInt) 
+    {
+        this.convRef = anInt ;
+    }
+    
+}
+
+//Customer Post
+
+package smsystem1.pkg0;
+import java.text.SimpleDateFormat;
+
+/**
+ *
+ * @author d4ni3l
+ */
+public class CustomerPost 
+{
+     /**
+     *
+     */
+    public SimpleDateFormat dateTime;
+    public String message;
+    public int postRef;
+    public Conversation postConv;
+    
+
+    public CustomerPost(SimpleDateFormat aDate,String aMessage, int aRef, Conversation aConv) 
+    {
+        this.dateTime = aDate ;
+        this.message = aMessage;
+        this.postRef = aRef;
+        this.postConv = aConv;
+    }
+}
+
+//Reply
+
+package smsystem1.pkg0;
+
+/**
+ *
+ * @author d4ni3l
+ */
+public class Reply 
+{
+     /**
+     *
+     */
+    public int postRef;
+    public int replyRef;
+    public Conversation replyConv;
+
+    public Reply(int aInt, int bInt,Conversation aConv) 
+    {
+        this.postRef = aInt ;
+        this.replyRef = bInt;
+        this.replyConv = aConv;
+    }
+    
+}
+
+//PostCount
+
+package smsystem1.pkg0;
+
+import java.util.Date;
+
+/**
+ *
+ * @author d4ni3l
+ */
+public class PostCount 
+{
+     /**
+     *
+     */
+    public Date startDate;
+    public Date endDate;
+
+    public PostCount(Date aDate, Date bDate) 
+    {
+        this.startDate = aDate ;
+        this.endDate = bDate;
+    }
+}
+
+//Conversation Count
+
+package smsystem1.pkg0;
+
+/**
+ *
+ * @author d4ni3l
+ */
+import java.util.Date;
+
+/**
+ *
+ * @author d4ni3l
+ */
+public class ConversationCount
+{
+     /**
+     *
+     */
+    public Date startDate;
+    public Date endDate;
+
+    public ConversationCount(Date aDate, Date bDate) 
+    {
+        this.startDate = aDate ;
+        this.endDate = bDate;
+    }
 }
